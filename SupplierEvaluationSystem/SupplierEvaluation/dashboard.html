@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Supplier Evaluation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>EvalCore</span>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard.html" class="menu-item active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="suppliers.html" class="menu-item"><i class="fa-solid fa-users"></i> Suppliers</a>
+                <a href="lab-reports.html" class="menu-item"><i class="fa-solid fa-flask"></i> Lab Reports</a>
+                <a href="chemical-purity.html" class="menu-item"><i class="fa-solid fa-vial"></i> Chemical Purity</a>
+                <a href="audits.html" class="menu-item"><i class="fa-solid fa-clipboard-check"></i> Audits</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">Admin</div>
+                <div class="user-info">
+                    <p class="name">System Admin</p>
+                    <p class="role">Evaluation Manager</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search suppliers, audits...">
+                </div>
+                <div class="actions">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="badge"></span></button>
+                    <button class="btn primary-btn"><i class="fa-solid fa-plus"></i> New Evaluation</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1 class="page-title">Supplier Performance Overview</h1>
+                
+                <!-- KPI Cards -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon blue"><i class="fa-solid fa-truck-fast"></i></div>
+                        <div class="kpi-details">
+                            <p class="kpi-label">Active Suppliers</p>
+                            <h2 class="kpi-value">124</h2>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon green"><i class="fa-solid fa-check-double"></i></div>
+                        <div class="kpi-details">
+                            <p class="kpi-label">Avg Quality Score</p>
+                            <h2 class="kpi-value">92%</h2>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon orange"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                        <div class="kpi-details">
+                            <p class="kpi-label">On-Time Delivery</p>
+                            <h2 class="kpi-value">88%</h2>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="kpi-details">
+                            <p class="kpi-label">High Risk</p>
+                            <h2 class="kpi-value">3</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table Section -->
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Top Suppliers</h2>
+                        <button class="btn secondary-btn">View All</button>
+                    </div>
+                    <table class="supplier-table">
+                        <thead>
+                            <tr>
+                                <th>Supplier Name</th>
+                                <th>Category</th>
+                                <th>Quality</th>
+                                <th>Delivery</th>
+                                <th>Overall Score</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="supplier-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>&copy; 2026 DRUMIL THAKOR. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

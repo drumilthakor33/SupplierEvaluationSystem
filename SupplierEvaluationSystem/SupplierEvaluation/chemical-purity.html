@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Chemical Purity - Supplier Evaluation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>EvalCore</span>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="suppliers.html" class="menu-item"><i class="fa-solid fa-users"></i> Suppliers</a>
+                <a href="lab-reports.html" class="menu-item"><i class="fa-solid fa-flask"></i> Lab Reports</a>
+                <a href="chemical-purity.html" class="menu-item active"><i class="fa-solid fa-vial"></i> Chemical Purity</a>
+                <a href="audits.html" class="menu-item"><i class="fa-solid fa-clipboard-check"></i> Audits</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">Admin</div>
+                <div class="user-info">
+                    <p class="name">System Admin</p>
+                    <p class="role">Evaluation Manager</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search chemicals...">
+                </div>
+                <div class="actions">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="badge"></span></button>
+                    <button class="btn primary-btn"><i class="fa-solid fa-plus"></i> Add Chemical</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1 class="page-title">Chemical Purity Standards</h1>
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Reference Database</h2>
+                    </div>
+                    <table class="supplier-table">
+                        <thead>
+                            <tr>
+                                <th>Chemical Name</th>
+                                <th>Category</th>
+                                <th>Minimum Standard (%)</th>
+                                <th>Expected Standard (%)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Sodium_Chloride</strong></td><td>Salts</td><td>98.0%</td><td>99.5%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Sodium_Chloride"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Sulfuric_Acid</strong></td><td>Acids</td><td>95.0%</td><td>98.0%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Sulfuric_Acid"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Potassium_Nitrate</strong></td><td>Nitrates</td><td>96.5%</td><td>99.0%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Potassium_Nitrate"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Calcium_Carbonate</strong></td><td>Carbonates</td><td>97.0%</td><td>98.5%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Calcium_Carbonate"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Magnesium_Sulfate</strong></td><td>Sulfates</td><td>98.5%</td><td>99.5%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Magnesium_Sulfate"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Ammonium_Nitrate</strong></td><td>Nitrates</td><td>95.0%</td><td>98.0%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Ammonium_Nitrate"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                            <tr><td><strong>Sodium_Hydroxide</strong></td><td>Bases</td><td>97.5%</td><td>99.0%</td><td><button class="btn secondary-btn send-to-calc" data-chemical="Sodium_Hydroxide"><i class="fa-solid fa-calculator"></i> Send to Calculator</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>&copy; 2026 DRUMIL THAKOR. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

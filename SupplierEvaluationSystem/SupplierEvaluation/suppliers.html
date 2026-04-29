@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers Directory - Supplier Evaluation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>EvalCore</span>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="suppliers.html" class="menu-item active"><i class="fa-solid fa-users"></i> Suppliers</a>
+                <a href="lab-reports.html" class="menu-item"><i class="fa-solid fa-flask"></i> Lab Reports</a>
+                <a href="chemical-purity.html" class="menu-item"><i class="fa-solid fa-vial"></i> Chemical Purity</a>
+                <a href="audits.html" class="menu-item"><i class="fa-solid fa-clipboard-check"></i> Audits</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">Admin</div>
+                <div class="user-info">
+                    <p class="name">System Admin</p>
+                    <p class="role">Evaluation Manager</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search suppliers...">
+                </div>
+                <div class="actions">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="badge"></span></button>
+                    <button class="btn primary-btn" id="open-add-supplier-modal"><i class="fa-solid fa-plus"></i> Add Supplier</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1 class="page-title">Suppliers Directory</h1>
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>All Registered Suppliers</h2>
+                    </div>
+                    <table class="supplier-table">
+                        <thead>
+                            <tr>
+                                <th>Supplier Name</th>
+                                <th>Category</th>
+                                <th>Quality</th>
+                                <th>Delivery</th>
+                                <th>Overall Score</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="supplier-table-body">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>&copy; 2026 DRUMIL THAKOR. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+    <!-- Add Supplier Modal -->
+    <div class="modal-overlay" id="add-supplier-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Supplier</h2>
+                <button class="close-modal-btn" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="add-supplier-form">
+                <div class="form-group">
+                    <label for="supplier-name">Supplier Name</label>
+                    <input type="text" id="supplier-name" required placeholder="e.g. Acme Corp">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-category">Category</label>
+                    <select id="supplier-category" required>
+                        <option value="">Select Category</option>
+                        <option value="Raw Materials">Raw Materials</option>
+                        <option value="Packaging">Packaging</option>
+                        <option value="Chemicals">Chemicals</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Lab Equipment">Lab Equipment</option>
+                        <option value="Logistics">Logistics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="supplier-quality">Quality Score (0-100)</label>
+                    <input type="number" id="supplier-quality" required min="0" max="100" placeholder="e.g. 95">
+                </div>
+                <div class="form-group">
+                    <label for="supplier-delivery">Delivery Score (0-100)</label>
+                    <input type="number" id="supplier-delivery" required min="0" max="100" placeholder="e.g. 90">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary-btn" id="cancel-modal-btn">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Save Supplier</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Sodium_Chloride 99.5
+Potassium_Nitrate 98.2
+Sulfuric_Acid 95.0
+Calcium_Carbonate 97.8
+Magnesium_Sulfate 99.1

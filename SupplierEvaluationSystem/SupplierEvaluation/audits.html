@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audits - Supplier Evaluation System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>EvalCore</span>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="menu-item"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="dashboard.html" class="menu-item"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="suppliers.html" class="menu-item"><i class="fa-solid fa-users"></i> Suppliers</a>
+                <a href="lab-reports.html" class="menu-item"><i class="fa-solid fa-flask"></i> Lab Reports</a>
+                <a href="chemical-purity.html" class="menu-item"><i class="fa-solid fa-vial"></i> Chemical Purity</a>
+                <a href="audits.html" class="menu-item active"><i class="fa-solid fa-clipboard-check"></i> Audits</a>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">Admin</div>
+                <div class="user-info">
+                    <p class="name">System Admin</p>
+                    <p class="role">Evaluation Manager</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search audits...">
+                </div>
+                <div class="actions">
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i><span class="badge"></span></button>
+                    <button class="btn primary-btn"><i class="fa-solid fa-plus"></i> Schedule Audit</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <h1 class="page-title">Recent Audits</h1>
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h2>Audit Logs</h2>
+                    </div>
+                    <table class="supplier-table">
+                        <thead>
+                            <tr>
+                                <th>Audit ID</th>
+                                <th>Supplier Name</th>
+                                <th>Date</th>
+                                <th>Auditor</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>#AUD-001</td><td>Acids & Co</td><td>Oct 12, 2026</td><td>System Admin</td><td><span class="status-badge status-approved">Passed</span></td></tr>
+                            <tr><td>#AUD-002</td><td>Initech</td><td>Oct 10, 2026</td><td>System Admin</td><td><span class="status-badge status-critical">Failed</span></td></tr>
+                            <tr><td>#AUD-003</td><td>Globex Corporation</td><td>Oct 05, 2026</td><td>System Admin</td><td><span class="status-badge status-warning">Needs Review</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <footer class="app-footer">
+                <p>&copy; 2026 DRUMIL THAKOR. All Rights Reserved.</p>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
